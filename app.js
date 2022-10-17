@@ -4,6 +4,8 @@ const setGridBtn = document.querySelector('#slider-btn');
 const colorPicker = document.querySelector('#color-wheel');
 const clearBtn = document.querySelector('#clear-btn');
 const eraseBtn = document.querySelector('#erase-btn');
+const drawClickBtn = document.querySelector('#draw-click');
+const drawDragBtn = document.querySelector('#draw-drag');
 
 
     function createGrid(size){
@@ -17,9 +19,20 @@ const eraseBtn = document.querySelector('#erase-btn');
              boxes.style.minHeight = '100%';
              boxes.style.minWidth = '100%';
              //set hover
-             boxes.addEventListener('mouseover', function(){
-                 boxes.style.backgroundColor = `${colorPicker.value}`
-             });
+            //  boxes.addEventListener('mouseover', function(){
+            //      boxes.style.backgroundColor = `${colorPicker.value}`
+            drawClickBtn.addEventListener('click', function(){
+                boxes.addEventListener('click', function(){
+                    boxes.style.backgroundColor = `${colorPicker.value}`
+                });
+            })
+            // mouse over draw
+            drawDragBtn.addEventListener('click', function(){
+                boxes.addEventListener('mouseover', function(){
+                    boxes.style.backgroundColor = `${colorPicker.value}`
+                });
+            })
+            //  });
              // setup grid
             grid.style.display = 'grid';
             //set grid columns and rows
@@ -47,4 +60,5 @@ eraseBtn.addEventListener('click', function(){
     console.log(colorPicker.value)
 })
 
-console.log(colorFill)
+//draw click 
+

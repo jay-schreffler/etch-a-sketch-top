@@ -21,8 +21,12 @@
     flex-direction: column;
 }
 
-.controls h2 {
+.controls h2, h3 {
     color:lightgoldenrodyellow;
+}
+
+.controls h3 {
+    margin-top: 15px;
 }
 
 input[type=color] {
@@ -30,7 +34,7 @@ input[type=color] {
     width: 100px;
 }
 
-.controls h2 {
+.controls h2{
     margin-top: 20vh;
     margin-bottom: 10px;
     border-radius: 5px;
@@ -47,7 +51,7 @@ input[type=range]::-webkit-slider-runnable-track {
     padding: 1px;
 }
 
-#erase-btn, #clear-btn, #slider-btn {
+#erase-btn, #clear-btn, #slider-btn, #draw-click, #draw-drag {
     margin-bottom: 15px;
 }
 
