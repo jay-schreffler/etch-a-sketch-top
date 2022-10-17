@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etch-a-Sketch</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="controls-wrapper">
+            <div class="controls">
+                <h2>Grid Size</h2>
+                <input type="range" min='16' max='80' class='slider'>
+                <button id='slider-btn'>Set Grid</button>
+                <button id="erase-btn">Erase</button>
+                <button id="clear-btn">Clear</button>
+                <label for="color-wheel">Color Picker</label>
+                <input id='color-wheel' type="color">
+            </div>
+        </div>
+        <div class="grid-wrapper">
+            <div class="grid-work-area"></div>
+        </div>
+    </div>
+
+    <script src='app.js'></script>
+</body>
+</html>
