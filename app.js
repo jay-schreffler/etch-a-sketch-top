@@ -1,6 +1,10 @@
 const grid = document.querySelector('.grid-work-area');
 let gridSize = document.querySelector('.slider');
-const setGridBtn = document.querySelector('#slider-btn')
+const setGridBtn = document.querySelector('#slider-btn');
+const colorPicker = document.querySelector('#color-wheel');
+const clearBtn = document.querySelector('#clear-btn');
+const eraseBtn = document.querySelector('#erase-btn');
+
 
     function createGrid(size){
         for(let i = 0; i < size * size; i++) {
@@ -14,7 +18,7 @@ const setGridBtn = document.querySelector('#slider-btn')
              boxes.style.minWidth = '100%';
              //set hover
              boxes.addEventListener('mouseover', function(){
-                 boxes.style.backgroundColor = 'yellow'
+                 boxes.style.backgroundColor = `${colorPicker.value}`
              });
              // setup grid
             grid.style.display = 'grid';
@@ -29,6 +33,18 @@ setGridBtn.addEventListener('click', function(){
     //clears previous grid layout
     grid.innerHTML = '';
     createGrid(gridSize.value)
-    console.log(gridSize.value);
+    console.log(`Grid Size: ${gridSize.value}`);
     });
 
+//clear button
+clearBtn.addEventListener('click', function(){
+    grid.innerHTML = '';
+})
+
+//erase button 
+eraseBtn.addEventListener('click', function(){
+    colorPicker.value = '#ffffff'
+    console.log(colorPicker.value)
+})
+
+console.log(colorFill)
