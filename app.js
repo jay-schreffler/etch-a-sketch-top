@@ -18,9 +18,7 @@ const drawDragBtn = document.querySelector('#draw-drag');
              boxes.style.border = '1px solid black';
              boxes.style.minHeight = '100%';
              boxes.style.minWidth = '100%';
-             //set hover
-            //  boxes.addEventListener('mouseover', function(){
-            //      boxes.style.backgroundColor = `${colorPicker.value}`
+             //mouse click draw
             drawClickBtn.addEventListener('click', function(){
                 boxes.addEventListener('click', function(){
                     boxes.style.backgroundColor = `${colorPicker.value}`
